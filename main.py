@@ -76,7 +76,7 @@ def obfuscate(request: CodeRequest):
     stored_payloads[payload_id] = obfuscated_code
     
     # ==== DE SIMPELE LOADSTRING (Zoals je wilde) ====
-    loader_script = f"loadstring(game:HttpGet('http://127.0.0.1:8000/loader/{payload_id}'))()"
+    loader_script = f"loadstring(game:HttpGet('https://aurax-hub.onrender.com/loader/{payload_id}'))()"
     
     return {"success": True, "code": loader_script}
 
